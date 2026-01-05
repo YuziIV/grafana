@@ -1,0 +1,22 @@
+apiVersion: 1
+
+datasources:
+  - name: InfluxDB
+    type: influxdb
+    access: proxy
+    isDefault: true
+
+    url: http://172.16.0.11:8086
+    database: robot_data_db
+    user: ${INFLUX_USER}
+    basicAuthUser: ${INFLUX_USER}
+
+    jsonData:
+      httpMode: GET
+
+    secureJsonData:
+      password: ${INFLUX_PASSWORD}
+      basicAuthPassword: ${INFLUX_PASSWORD} 
+    
+    editable: false
+    basicAuth: true 

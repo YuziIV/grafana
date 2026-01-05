@@ -1,0 +1,38 @@
+# -------------------------------
+# Grafana-specific files to ignore
+# -------------------------------
+
+# Data folder (Grafana storage, database, plugins)
+data/
+*.db
+*.sqlite
+*.lock
+
+# Provisioning temp files (sometimes Grafana generates temp files here)
+provisioning/**/*.tmp
+provisioning/**/*.bak
+
+# Environment file with secrets
+.env
+
+# Logs
+*.log
+logs/
+*.err
+
+# OS/Editor files
+*.swp
+*.swo
+*.DS_Store
+Thumbs.db
+*.bak
+*.tmp
+
+# Docker
+docker-compose.override.yml
+*.pid
+
+# Node / frontend builds (if you have Grafana plugins)
+node_modules/
+dist/
+build/
